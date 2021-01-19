@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header top*/
+
+.header__top {
+    height: 123px;
+    background-color: #F8F8F8;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo {
+    width: 241px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+}
+
+.header__logo h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.05em; 
+    color: #265BC5;
+}
+
+.header__logo__item {
+    top: 20px;
+    right: 15%;
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__item {
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo__item i {
+    font-size: 22.04px;
+    color: #265BC5;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+.logo__item a {
+    color: #EE1F23;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo__item a:hover {
+    color:#265BC5;
+}
+
+/* Header banner */
+
+.header__banner {
+    background-image: url("../images/image\ 3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 763px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30%;
+    padding-right: 20%;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.menu__items ul {
+    /* margin-top: 23px; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menu__items li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.menu__items a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #F8F8F8;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+}
+
+li.active-item a::before {
+    opacity: 1;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #C1F8FF;
+    left: 0px;
+    bottom: -20px;
+    position: absolute;
+}
+
+.active-content a:hover::before {
+   opacity: 1;
+   content: "";
+   width: 140%;
+   height: 3px;
+   background-color: #C1F8FF;
+   left: -15px;
+   bottom: -20px;
+   position: absolute;
+}
+
+.header__main-title {
+    margin-top: 98px;
+    width: 60%;
+    color: #fff;
+    text-align: justify
+}
+
+.header__main-title h3 {
+    font-size: 46px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+.header__main-title p {
+    margin-bottom: 55px;
+    margin-right: 90px;
+}
+
+.header__main-title a {
+    background-color: #EE1F23;
+    padding: 14px 51px;
+    color: #fff;
+    font-family: "Mulish", sans-serif;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header__main-title a:hover {
+    color: #EE1F23;
+    background-color: #fff;
+}
+
+.header__main-title button {
+    border:none;
+    outline: none;
+}
+
+.header__main-title i {
+    background-color: #fff;
+    margin-left: 0px;
+    padding: 16px 17px;
+}
+
+.header__main-logo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 30%;
+    right: 15%;
+    font-size: 26px;
+}
+
+.header__main-logo a {
+    color:  #fff;
+}
+
+.header__main-logo a:hover {
+    color:  #0d6efd;
+}
+
+.header__main-logo a i {
+    margin-bottom: 25px;
+}
