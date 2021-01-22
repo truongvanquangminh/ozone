@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ozone</title>
 
+    <!-- Lazy -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.7/jquery.lazyload.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -26,15 +30,18 @@
 </head>
 
 <body>
+    <div id='status'></div>
+    <div id='loader'></div>
 
     <div class="wrapper">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
         <!-- Header -->
         <div class="header">
-
             <div class="header__top">
+                <div id="trapezoid"></div>
                 <div class="container">
                     <div class="header__logo">
-                        <a href="#"><img src="images/logo.svg" alt="logo"></a>
+                        <a href="#"><img class="lazy" src="images/logo.svg" alt="logo"></a>
                         <h5>Materials Importer & Constructon</h5>
                     </div>
 
@@ -73,11 +80,11 @@
                         <div class="container">
                             <div class="menu__items">
                                 <ul>
-                                    <li class="active-item"><a href="#">TRANG CHỦ</a></li>
-                                    <li class="active-content"><a href="#">DỊCH VỤ</a></li>
-                                    <li class="active-content"><a href="#">ALBUM ẢNH</a></li>
-                                    <li class="active-content"><a href="#">CHỨNG NHẬN</a></li>
-                                    <li class="active-content"><a href="#">LIÊN HỆ</a></li>
+                                    <li class="active-item"><a href="#home">TRANG CHỦ</a></li>
+                                    <li class="active-content"><a href="#service">DỊCH VỤ</a></li>
+                                    <li class="active-content"><a href="#news">ALBUM ẢNH</a></li>
+                                    <li class="active-content"><a href="#user">CHỨNG NHẬN</a></li>
+                                    <li class="active-content"><a href="#contact">LIÊN HỆ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -104,15 +111,15 @@
         </div>
 
         <!-- About -->
-        <div class="about">
+        <div class="about" id="home">
             <div class="container">
                 <div class="about_content">
                     <div class="about_content-left">
-                        <img src="images/Rectangle 319.png" alt="chuthich">
+                        <img class="lazy" src="images/Rectangle 319.png" alt="chuthich">
                         <div class="about_left-item">
                             <div class="about_item-logo">
                                 <div class="about_logo-vecto">
-                                    <img src="images/vector.png" alt="">
+                                    <img class="lazy" src="images/vector.png" alt="">
                                 </div>
                                 <p>VẬT LIỆU TỰ NHIÊN TRONG XÂY DỰNG DÂN DỤNG</p>
                             </div>
@@ -143,13 +150,13 @@
         </div>
 
         <!-- Service -->
-        <div class="services">
+        <div class="services" id="service">
             <div class="container">
                 <div class="service__content">
                     <div class="service__item">
                         <div class="items__top">
-                            <img src="images/tuvankhachhang.svg" alt="tuvankhachhang">
-                            <img src="images/1.svg" alt="1">
+                            <img class="lazy" src="images/tuvankhachhang.svg" alt="tuvankhachhang">
+                            <img class="lazy" src="images/1.svg" alt="1">
                         </div>
                         <div class="items__bottom">
                             <h4>1. TƯ VẤN KHÁCH HÀNG</h4>
@@ -161,8 +168,8 @@
                     </div>
                     <div class="service__item" id="active">
                         <div class="items__top">
-                            <img src="images/timkiemvatlieu.svg" alt="timkiemvatlieu">
-                            <img src="images/2.svg" alt="2">
+                            <img class="lazy" src="images/timkiemvatlieu.svg" alt="timkiemvatlieu">
+                            <img class="lazy" src="images/2.svg" alt="2">
                         </div>
                         <div class="items__bottom">
                             <h4>2. TÌM KIẾM VẬT LIỆU</h4>
@@ -174,8 +181,8 @@
                     </div>
                     <div class="service__item">
                         <div class="items__top">
-                            <img src="images/giaitrinh.svg" alt="giaitrinh">
-                            <img src="images/3.svg" alt="3">
+                            <img class="lazy" src="images/giaitrinh.svg" alt="giaitrinh">
+                            <img class="lazy" src="images/3.svg" alt="3">
                         </div>
                         <div class="items__bottom">
                             <h4>3. TRÌNH MẪU - GIẢI TRÌNH</h4>
@@ -187,8 +194,8 @@
                     </div>
                     <div class="service__item">
                         <div class="items__top">
-                            <img src="images/giaohang.svg" alt="giaohang">
-                            <img src="images/4.svg" alt="4">
+                            <img class="lazy" src="images/giaohang.svg" alt="giaohang">
+                            <img class="lazy" src="images/4.svg" alt="4">
                         </div>
                         <div class="items__bottom">
                             <h4>4. GIAO HÀNG - THANH TOÁN</h4>
@@ -203,7 +210,7 @@
             </div>
         </div>
 
-        <div class="news">
+        <div class="news" id="news">
             <div class="container">
                 <div class="news__top">
                     <a href="#">OZONE COMPANY</a>
@@ -211,7 +218,7 @@
                 </div>
                 <div class="news_content">
                     <div class="news_item">
-                        <img src="images/Rectangle 290.png" alt="">
+                        <img class="lazy" src="images/Rectangle 290.png" alt="">
                         <div class="news__title">
                             <h4>Can your business become better with new technology?</h4>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -228,7 +235,7 @@
                         </div>
                     </div>
                     <div class="news_item">
-                        <img src="images/Rectangle 291 (1).png" alt="">
+                        <img class="lazy" src="images/Rectangle 291 (1).png" alt="">
                         <div class="news__title">
                             <h4>Can your business become better with new technology?</h4>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -245,7 +252,7 @@
                         </div>
                     </div>
                     <div class="news_item">
-                        <img src="images/Rectangle 291 (2).png" alt="">
+                        <img class="lazy" src="images/Rectangle 291 (2).png" alt="">
                         <div class="news__title">
                             <h4>Can your business become better with new technology?</h4>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -267,14 +274,14 @@
         </div>
 
         <!-- User -->
-        <div class="user">
+        <div class="user" id="user">
             <div class="container">
                 <div class="user__top">
                     <a href="#">OZONE COMPANY</a>
                     <h2>KHÁCH HÀNG</h2>
                     <div class="user__content">
                         <div class="user__picture">
-                            <img src="images/Rectangle 323.png" alt="">
+                            <img class="lazy" src="images/Rectangle 323.png" alt="">
                             <div class="picture__item">
                                 <h5>JONATHAN ADAMS</h5>
                                 <small>Founder, Great Wall Ltd.</small>
@@ -282,7 +289,7 @@
                         </div>
                         <div class="user__item">
                             <div class="vector__item">
-                                <img src="images/Frame.png" alt="">
+                                <img class="lazy" src="images/Frame.png" alt="">
                             </div>
                             <div class="user__text">
                                 <div class="owl-carousel">
@@ -350,17 +357,17 @@
             </div>
             <div class="user__logo">
                 <div class="container">
-                    <img src="images/logo__user-1.png" alt="">
-                    <img src="images/logo__user-2.png" alt="">
-                    <img src="images/logo__user-3.png" alt="">
-                    <img src="images/logo__user-4.png" alt="">
-                    <img src="images/logo__user-5.png" alt="">
+                    <img class="lazy" src="images/logo__user-1.png" alt="">
+                    <img class="lazy" src="images/logo__user-2.png" alt="">
+                    <img class="lazy" src="images/logo__user-3.png" alt="">
+                    <img class="lazy" src="images/logo__user-4.png" alt="">
+                    <img class="lazy" src="images/logo__user-5.png" alt="">
                 </div>
             </div>
         </div>
 
         <!-- Contact -->
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="container">
                 <h3>LIÊN HỆ</h3>
                 <div class="contact__content">
@@ -396,7 +403,7 @@
             <div class="container">
                 <div class="footer__top">
                     <div class="footer__top-left">
-                        <a href="#"><img src="images/logo.svg" alt=""></a>
+                        <a href="#"><img class="lazy" src="images/logo.svg" alt=""></a>
                         <h4>JOINT STOCK COMPANY</h4>
                         <p>We always strive for growth and development as StylemixThemes. We don't want to have a large
                             team, we want to have a team that works in unity. Our slogan is "Every day is the last day".
@@ -415,19 +422,22 @@
                     <div class="footer__top-right">
                         <h5>Đăng ký nhận tin</h5>
                         <p>Nhập địa chỉ email của bạn để nhận thông tin ưu đãi mới nhất</p>
-                        <input type="email" placeholder="Enter email address">
+                        <div class="input__form">
+                            <input type="email" placeholder="Enter email...">
+                            <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                        </div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.795612681458!2d108.21748231418084!3d16.076092543525686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421839f94ea20f%3A0x349cb27bad6937a1!2zOTQgTMOqIEzhu6NpLCBUaOG6oWNoIFRoYW5nLCBI4bqjaSBDaMOidSwgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1611292904519!5m2!1svi!2s"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+                            width="100%" height="120px" frameborder="0" style="border:0;" allowfullscreen=""
                             aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="footer__bottom">
-                    <div class="container">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
