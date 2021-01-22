@@ -592,3 +592,157 @@ li.active-item a::before {
     width: 10px;
     height: 10px;
 }
+
+/* Contact */
+.contact {
+    height: 212px;
+    background-image: url("../images/Rectangle\ 331.png");
+    position: relative;
+}
+
+.contact:before {
+    content: "";
+    background-color: #265BC5;
+    opacity: 0.8;
+    height: 212px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.contact h3 {
+    font-family: "Mulish", sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    top: 90px;
+}
+
+.contact__content {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 20%;
+    top: 25%;
+    display: flex;
+    align-items: flex-start;    
+    justify-content: center; 
+}
+
+.contact__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 20%;
+}
+
+.contact__item i {
+    margin: 9px;
+    font-size: 40px;
+    color: #C1F8FF;
+    
+}
+
+.contact__logo {
+    border-radius: 50%;
+    background-color: #265BC5;
+    width: 58px;
+    height: 58px;
+    opacity: 0.5;
+}
+
+.contact__logo:hover {
+    background-color: #555555;
+    opacity: 0.8;
+}
+
+.contact__item a {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+    height: 598px;
+    background: #F3F3F6;
+    position: relative;
+    justify-content: center;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.footer__top-left {
+    width: 40%;
+}
+
+.footer__top-left img {
+    margin-bottom: 40px;
+}
+
+.footer__top-center {
+    width: 20%;
+    height: 50%;
+}
+
+.footer__top-center h5 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #265BC5;
+}
+
+.footer__top-center ul {
+    padding: 0;
+}
+
+.footer__top-center li {
+    margin-bottom: 18px;
+    list-style: none;
+}
+
+.footer__top-center ul li::before {
+    border-radius: 50%;
+    content: "\2022";
+    color: #EE1F23;
+    margin-right: 10px;
+}
+
+.footer__top-center a {
+    color:#000;
+    text-decoration: none;
+}
+
+.footer__top-center a:hover {
+    color:#265BC5;
+}
+
+.footer__top-right {
+    width: 25%;
+}
+
+.footer__top-right h5 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #265BC5;
+    margin-bottom: 15px;
+} 
+
+.footer__top-right input {
+    width: 100%;
+    height: 48px;
+    padding-left: 10px;
+    border: 1px solid #CAD3DF;
+    background: #ECEFF4;
+    margin-bottom: 10px;
+    outline: none;
+}
