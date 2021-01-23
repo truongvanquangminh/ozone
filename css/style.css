@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    position: relative;
+}
+
 /* Hiệu ứng load trang */
 #status {
     width: 200px;
@@ -33,7 +37,7 @@
 /* Nút button GO TO BACK */
 #myBtn {
     display: none;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 30px;
     z-index: 99;
@@ -137,6 +141,7 @@
 }
 
 .header__menu {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding-left: 30%;
@@ -277,7 +282,7 @@ li.active-item a::before {
 .about_content {
     display: flex;
     justify-content: space-between;
-    padding: 80px;
+    padding: 50px;
 }
 
 .about_content-left {
@@ -517,6 +522,7 @@ li.active-item a::before {
     justify-content: space-between;
     align-items: center;
     padding: 0 27px;
+    border-top: 2px solid #E0E0E0;
 }
 
 .news__right a {
@@ -849,4 +855,8 @@ li.active-item a::before {
 
 .footer__bottom a {
     margin: 0 10px;
+}
+
+.logo_footer {
+    display: none;
 }
